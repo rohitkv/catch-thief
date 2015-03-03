@@ -8,7 +8,9 @@ def game():
     width, height = 800, 500
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption('My Star Catcher Game')
-    background = pygame.image.load('https://cloud.githubusercontent.com/assets/10056043/6462979/1bbcfcd6-c1d4-11e4-8570-ebf8f2977745.jpg')
+    
+    #background image... give your own path to an image file
+    background = pygame.image.load('d.jpg')
     
     background = pygame.transform.scale(background, (width, height))
    
@@ -19,8 +21,9 @@ def game():
     target = []
 
     for i in range(targetnum):
-        targetimage = pygame.image.load('https://cloud.githubusercontent.com/assets/10056043/6462981/1bc56c9a-c1d4-11e4-93e2-24fb680f6ea1.gif')
         
+        #thief image... give your own path to an image file
+        targetimage = pygame.image.load('t.gif')
         targetimage = pygame.transform.scale(targetimage, (20, 20))
         target.append([])
         target[i] = targetimage
@@ -38,7 +41,7 @@ def game():
         targetvisible.append(True)
 
     #load player image
-    player = pygame.image.load('https://cloud.githubusercontent.com/assets/10056043/6462980/1bc1b870-c1d4-11e4-8445-d6ee1c613857.jpg')
+    player = pygame.image.load('man.jpg')
     player = pygame.transform.scale(player, (playerwidth, playerheight))
     px, py = (width-playerwidth)/2, (height-playerheight)/2
 
